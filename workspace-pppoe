@@ -1,0 +1,17 @@
+I am using a PPPoE connection to access the internet. Behind the router is my Wireguard server to which I connect from a remote location and use the VPN connection.
+
+I noticed that for some situations, the connection doesn’t work. Googling for the solution gave me a hint on tweaking the MTU of the connection (on both ends), but this also didn’t seem to fix it.
+
+Given the below network diagram, I have set an iptables rule to clamp the MSS (Maximum Segment Size) to the PMTU (Path Maximum Transfer Unit).
+
+
+This was needed because, most probably, my ISP on the location is blocking ICMP fragmentation packets needed for the connection.
+
+iptables -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+
+If you need to manually set the MTU for the wg0 connection, you need to edit /etc/wireguard/wg0.conf and add the following line:
+
+MTU = 1420
+
+Note that 1420 is the default MTU calculated by Wireguard, therefore this edit is not needed if everything else works as intended.
+
