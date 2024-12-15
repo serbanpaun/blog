@@ -1,3 +1,6 @@
+Wireguard not working in some cases with PPPoE connection
+===
+
 I am using a PPPoE connection to access the internet. Behind the router is my Wireguard server to which I connect from a remote location and use the VPN connection.
 
 I noticed that for some situations, the connection doesn’t work. Googling for the solution gave me a hint on tweaking the MTU of the connection (on both ends), but this also didn’t seem to fix it.
