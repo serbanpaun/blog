@@ -1,0 +1,47 @@
+BASH keyboard shortcuts
+===
+
+ALT key shortcuts
+ 1. ALT+A – Go to the beginning of a line.
+ 2. ALT+B – Move one character before the cursor.
+ 3. ALT+C – Suspends the running command/process. Same as CTRL+C
+ 4. ALT+D – Deletes all characters after the cursor.
+ 5. ALT+F – Move forward one character.
+ 6. ALT+T – Swaps the last two words.
+ 7. ALT+U – Capitalize all characters in a word after the cursor.
+ 8. ALT+L – Uncaptalize all characters in a word after the cursor.
+ 9. ALT+R – Undo any changes to a command that you have brought from the history if you’ve edited it.
+10. ALT+. – Use the last word of the previous command.
+
+CTRL key shortcuts
+ 1. CTRL+A – Quickly move to the beginning of line. (Also HOME key)
+ 2. CTRL+B – To move backward one character. (Also LEFT key)
+ 3. CTRL+C – Stop the currently running command
+ 4. CTRL+D – Delete one character backward. (Also DELETE key)
+ 5. CTRL+E – Move to the end of line (Also END key)
+ 6. CTRL+F – Move forward one character (Also RIGHT arrow)
+ 7. CTRL+G – Leave the history searching mode without running the command.
+ 8. CTRL+H – Delete the characters before the cursor, same as BACKSPACE.
+ 9. CTRL+J – Same as ENTER/RETURN key.
+10. CTRL+K – Delete all characters after the cursor.
+11. CTRL+L – Clears the screen and redisplay the line.
+12. CTRL+M – Same as CTRL+J or RETURN.
+13. CTRL+N – Display next line in command history. (Also DOWN arrow)
+14. CTRL+O – Run the command that you found using reverse search i.e CTRL+R.
+15. CTRL+P – Displays the previous line in command history. (Also UP arrow)
+16. CTRL+R – Searches the history backward (Reverse search).
+17. CTRL+S – Stop output to the screen (Resume with CTRL+Q)
+18. CTRL+T – Swaps the last two characters.
+19. CTRL+U – Delete all characters before the cursor (Kills backward from point to the beginning of line).
+20. CTRL+V – Makes the next character typed verbatim
+21. CTRL+W – Delete the words before the cursor.
+22. CTRL+X – Lists the possible filename completions of the current word.
+23. CTRL+XX – Move between start of command line and current cursor position (and back again).
+24. CTRL+Y –  Retrieves last item that you deleted or cut.
+25. CTRL+Z – Stops the current command. It kills the currently running command. You can resume it with fg in the foreground or bg in the background.
+26. CTRL+[ – Equivalent to ESC key.
+27. CTRL+7 - Undo
+
+Miscellaneous
+1. !! – Repeats the last command.
+2. ESC+t – Swaps the last two words.
