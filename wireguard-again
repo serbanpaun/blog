@@ -2,7 +2,7 @@ Oh, well...
 
 As I always mix these awful keys and forget which one to put where, here it is... A simple explanation about where each Wireguard key should go...
 
-=== On the SERVER ===
+=== ON THE SERVER ===
 In the server config file you put only the client keys in the [Peer] section:
 
 [Peer]
