@@ -1,5 +1,4 @@
-Wireguard not working in some cases with PPPoE connection
-===
+# Wireguard not working in some cases with PPPoE connection
 
 I am using a PPPoE connection to access the internet. Behind the router is my Wireguard server to which I connect from a remote location and use the VPN connection.
 
@@ -10,11 +9,10 @@ Given the below network diagram, I have set an iptables rule to clamp the MSS (M
 
 This was needed because, most probably, my ISP on the location is blocking ICMP fragmentation packets needed for the connection.
 
-iptables -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+`iptables -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu`
 
 If you need to manually set the MTU for the wg0 connection, you need to edit /etc/wireguard/wg0.conf and add the following line:
 
-MTU = 1420
+`MTU = 1420`
 
 Note that 1420 is the default MTU calculated by Wireguard, therefore this edit is not needed if everything else works as intended.
-
