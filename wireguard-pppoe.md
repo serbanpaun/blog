@@ -6,6 +6,7 @@ I noticed that for some situations, the connection doesn’t work. Googling for 
 
 Given the below network diagram, I have set an iptables rule to clamp the MSS (Maximum Segment Size) to the PMTU (Path Maximum Transfer Unit).
 
+![Wireguard diagram](wireguard-pppoe.webp)
 
 This was needed because, most probably, my ISP on the location is blocking ICMP fragmentation packets needed for the connection.
 
