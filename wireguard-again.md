@@ -1,18 +1,21 @@
-Oh, well...
+# Oh, well...
 
 As I always mix these awful keys and forget which one to put where, here it is... A simple explanation about where each Wireguard key should go...
 
-=== ON THE SERVER ===
-In the server config file you put only the client keys in the [Peer] section:
+## ON THE SERVER
+In the server config file you put only the client keys in the `[Peer]` section:
 
+```
 [Peer]
 PublicKey = client's public key
 PresharedKey = preshared key - the same on server and client
 AllowedIPs = Internal IP of the client inside the VPN
+```
 
-=== ON THE CLIENT ===
+## ON THE CLIENT
 In the client config file you put:
 
+```
 [Interface]
 PrivateKey = client's private key
 Address = Internal IP address in the format IP.ADD.RE.SS/32
@@ -22,10 +25,13 @@ PublicKey = server public key
 Endpoint = server IP:port
 PresharedKey = the same as on the server
 AllowedIPs = 0.0.0.0/0 or whatever routes you want
-
-=== NOTE on CLIENT CONFIG ===
+```
+### NOTE on CLIENT CONFIG
     [Interface] is the CLIENT
     [Peer] is the SERVER
 
 
-It seems everytime the config is modified, a restart of wg-quick service is mandatory!
+It seems everytime the config is modified, a restart of `wg-quick` service is mandatory:\
+`systemctl restart wg-quick` OR\
+\
+`systemctl restart wg-quick@wg0` - depending on your configuration (replace `wg0` with your interface name).
