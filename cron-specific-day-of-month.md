@@ -1,17 +1,15 @@
-Execute cron on a specific day of the month
-===
-
-# Run on every second Tuesday of the month
-
+# Execute cron on a specific day of the month
+### Run on every second Tuesday of the month
+```
 20 4 8-14 * * test $(date +%u) -eq 2 && /usr/bin/bash /home/user/mytuesdayscript.sh
-
-Explanation:
-
+```
+> **Explanation:**\
 Run at 04:20 on every day-of-month from 8 through 14.
-
+```
 20   = 20th minute
 4    = 4am
 8-14 = between day 8 and day 14 (second week)
 *    = every month
 *    = every day of the week
+```
 But we are testing if day is number 2 (Tuesday. Sunday is 0) and we only run the script in this day.
