@@ -1,7 +1,5 @@
-BASH keyboard shortcuts
-===
-
-ALT key shortcuts
+# BASH keyboard shortcuts
+## ALT key shortcuts
  1. ALT+A – Go to the beginning of a line.
  2. ALT+B – Move one character before the cursor.
  3. ALT+C – Suspends the running command/process. Same as CTRL+C
@@ -13,7 +11,7 @@ ALT key shortcuts
  9. ALT+R – Undo any changes to a command that you have brought from the history if you’ve edited it.
 10. ALT+. – Use the last word of the previous command.
 
-CTRL key shortcuts
+## CTRL key shortcuts
  1. CTRL+A – Quickly move to the beginning of line. (Also HOME key)
  2. CTRL+B – To move backward one character. (Also LEFT key)
  3. CTRL+C – Stop the currently running command
@@ -42,6 +40,6 @@ CTRL key shortcuts
 26. CTRL+[ – Equivalent to ESC key.
 27. CTRL+7 - Undo
 
-Miscellaneous
+## Miscellaneous
 1. !! – Repeats the last command.
 2. ESC+t – Swaps the last two words.
