@@ -17,7 +17,9 @@ On your computer, in command prompt, you will see the ID of the device - and tha
 Now type this command in the command prompt - which will actually allow `PROJECT_MEDIA` permissions for the Anydesk app:
 
 ```
-adb shell appops set com.anydesk.anydeskandroid permission PROJECT_MEDIA allow
+adb shell appops set com.anydesk.anydeskandroid [permission] PROJECT_MEDIA allow
 ```
+
+(Depending on your Android version, you might need to add `permission` parameter.
 
 And that's it! You can now connect automatically to the device, without the popup showing to confirm the connection!
