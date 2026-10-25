@@ -20,6 +20,6 @@ Now type this command in the command prompt - which will actually allow `PROJECT
 adb shell appops set com.anydesk.anydeskandroid [permission] PROJECT_MEDIA allow
 ```
 
-(Depending on your Android version, you might need to add `permission` parameter.
+(Depending on your Android version, you might need to add `permission` parameter.)
 
 And that's it! You can now connect automatically to the device, without the popup showing to confirm the connection!
