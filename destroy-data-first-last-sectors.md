@@ -6,5 +6,7 @@ dd if=/dev/zero of=/dev/sdX bs=1M count=1024
 ## Wipe the last 1MB
 Some RAID configuration data might be present at the end of the disk, thus existing the need to delete this data, before reusing the disk
 ```
-dd bs=1M if=/dev/zero of=/dev/sdX count=1024 seek=$((`blockdev --getsz /dev/sdX` - 1024))
+dd bs=1M if=/dev/zero of=/dev/sdX count=1024 seek=$((`blockdev --getsize /dev/sdX` - 1024))
 ```
+
+Depending on your Linux distro, you might have to use `--getsz` instead of `--getsize` as a parameter for `blockdev`.
